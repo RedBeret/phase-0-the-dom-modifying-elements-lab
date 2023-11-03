@@ -1,28 +1,14 @@
-const element = document.createElement("div");
-// Let's append element to body to start:
-document.body.append(element);
-// create an unordered list:
-const ul = document.createElement("ul");
-// To populate our unordered list, we'll use a for loop to 
-// create three li's, give them some content, and append them to the ul:
-for (let i = 0; i < 3; i++) {
-  const li = document.createElement("li");
-  li.textContent = (i + 1).toString();
-  ul.append(li);
-}
-// Finally, we'll append the ul to the div we created:
-element.append(ul);
+//no longer has DOM node 'main#main' so Remove the main node with the ID 'main'
+document.getElementById('main').remove();
 
-const main = document.getElementById("main");
-main.innerHTML =
-  "<h1>Poodles!</h1><h3>An Essay into the Pom-Pom as Aesthetic Reconfiguration of the Other from a post-Frankfurt School Appropriationist Perspective</h3><p><em>By: Byron Q. Poodle, Esq., BA.</em></p>";
+// Create a new h1 element called newHeader
+const newHeader = document.createElement('h1');
 
+// Assign the ID 'victory' to the newHeader
+newHeader.id = 'victory';
 
+// Set the text content of newHeader. the 'newHeader' variable that points to the <h1> node with an id of 'victory' has the text "YOUR-NAME is the champion" (with your name in place of YOUR-NAME) inside it
+newHeader.textContent = "Steven is the champion";
 
-element.textContent = "You've changed what's on the screen!";
-element.style.fontSize = "24px";
-element.style.marginLeft = "30px";
-element.style.lineHeight = 2;
-
-element.className = "pet-listing dog";
-
+// Append the newHeader to the body
+document.body.append(newHeader);
